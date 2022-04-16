@@ -1,11 +1,17 @@
 import { display } from "@mui/system";
 import { useState } from "react";
-
+interface Image {
+  image: string;
+}
+interface Text {
+  text: string;
+}
 interface Props {
-  items: { [image: string]: any }[];
-  heading: { [text: string]: any }[];
+  items: Image[];
+  heading: Text[];
 }
 export default function SlideShow(props: Props) {
+  console.log(props);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
@@ -29,15 +35,16 @@ export default function SlideShow(props: Props) {
       <div className="slideshow-container">
         {props.items.map((el, index) => (
           <div
+            key={el.image}
             className="mySlides fade"
             hidden={currentSlide == index ? false : true}
           >
             <div className="numbertext">
               {index + 1} / {props.items.length}
-              <h1 className="headertext">{el.text}</h1>
+              <h1 className="headertext">{props.heading[index].text}</h1>
             </div>
 
-            {console.log(el)}
+            {/* {console.log(el)} */}
             <img
               className="headerimage"
               src={el.image}
@@ -63,6 +70,7 @@ export default function SlideShow(props: Props) {
       <div className="dot-container">
         {props.items.map((_, index) => (
           <span
+            key={index}
             className="dot"
             onClick={() => {
               setCurrentSlide(index);

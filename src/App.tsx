@@ -3,32 +3,36 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import SlideShow from "./components/SlideShow";
+// import Layout from "./components/Layout";
+import MainNavbar from "./components/MainNavbar";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      {/* <MainNavbar /> */}
-      <Hero
-        Heading="Interactive VR Architectural visualization"
-        SubHeading="Experience the Realistic Environment and interact with materials"
-        imageUrl="/1.jpg"
-      />
-      <Hero
-        Heading="3D Interior and Exterior Rendering"
-        SubHeading="Get Instant 3d modelling and high quality photorealistic renders with creative designs"
-        imageUrl="/2.jpg"
-      />
-      <Hero
-        Heading="Civil and Architecture Drawings"
-        SubHeading="Every Space Counts. Free unlimited concept plans and architectural consulatation"
-        imageUrl="/3.jpg"
-      />
-      <Hero
-        Heading="Introducing the Interactive VR visualisation technology"
-        SubHeading="Interactive VR visualisation will transport you to fully interactive 3D environment of you space designed by us, giving you the oppurtunity to explore a virtual representation of a particular room, floor, or building design as a whole"
-        imageUrl="/4.jpg"
-      />
+      <MainNavbar />
+      <div style={{ marginTop: "114px" }}>
+        <Hero
+          Heading="Interactive VR Architectural visualization"
+          SubHeading="Experience the Realistic Environment and interact with materials"
+          imageUrl="/1.jpg"
+        />
+        <Hero
+          Heading="3D Interior and Exterior Rendering"
+          SubHeading="Get Instant 3d modelling and high quality photorealistic renders with creative designs"
+          imageUrl="/2.jpg"
+        />
+        <Hero
+          Heading="Civil and Architecture Drawings"
+          SubHeading="Every Space Counts. Free unlimited concept plans and architectural consulatation"
+          imageUrl="/3.jpg"
+        />
+        <Hero
+          Heading="Introducing the Interactive VR visualisation technology"
+          SubHeading="Interactive VR visualisation will transport you to fully interactive 3D environment of you space designed by us, giving you the oppurtunity to explore a virtual representation of a particular room, floor, or building design as a whole"
+          imageUrl="/4.jpg"
+        />
+      </div>
       <div style={{}}>
         <span
           style={{

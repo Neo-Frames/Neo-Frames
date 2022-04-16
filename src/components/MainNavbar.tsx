@@ -1,7 +1,7 @@
 import { Button, createTheme, Divider, ThemeProvider } from "@mui/material";
 
 import SendIcon from "@mui/icons-material/Send";
-import Mainlogo from "./mainLogo";
+import Mainlogo from "./MainLogo";
 
 declare module "@mui/material/styles" {
   interface Theme {
@@ -49,14 +49,17 @@ const theme = createTheme({
 export default function MainNavbar() {
   return (
     <div
-      style={{ position: "sticky", top: "0", backgroundColor: "transparent" }}
+    // style={{ position: "sticky", top: "0", backgroundColor: "transparent" }}
     >
       <div
         style={{
           width: "100%",
-          position: "relative",
+          position: "fixed",
+          top: "0",
+          zIndex: "1",
           display: "flex",
           flexDirection: "row",
+          background: "black",
 
           justifyContent: "space-between",
           margin: "null",

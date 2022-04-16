@@ -21,16 +21,16 @@ export default function Hero(props: HeroProps) {
         width: "100vw",
       }}
     >
-      <MainNavbar />
+      {/* <MainNavbar /> */}
       <div>
         <div
           style={{
             marginLeft: "0.5em",
-            marginTop: "1.5em",
+            // marginTop: "1em",
             position: "relative",
             color: "white",
             fontWeight: "100",
-            fontSize: "5em",
+            fontSize: "2.5em",
             backgroundColor: "Black",
           }}
         >
@@ -44,7 +44,7 @@ export default function Hero(props: HeroProps) {
             position: "relative",
             color: "orange",
             fontWeight: "50",
-            fontSize: "3em",
+            fontSize: "1.5em",
           }}
         >
           {SubHeading}

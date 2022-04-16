@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { height } from "@mui/system";
-import Mainlogo from "./mainLogo";
+import Mainlogo from "./MainLogo";
 
 const bull = (
   <Box
@@ -27,7 +27,14 @@ const bull = (
 
 const card = (
   <React.Fragment>
-    <CardContent sx={{ gap: 2, alignItems: "center" }}>
+    <CardContent
+      sx={{
+        gap: 2,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "centre",
+      }}
+    >
       <Typography
         sx={{ ml: 10, fontSize: 14 }}
         color="text.secondary"
